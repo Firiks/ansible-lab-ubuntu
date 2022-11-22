@@ -1,0 +1,5 @@
+# basic host
+- hosts: servers
+  tasks:
+  - name: "Test connectivity"
+    ping:

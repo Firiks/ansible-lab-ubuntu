@@ -1,0 +1,14 @@
+
+[server_01]
+server01 ansible_ssh_host=server01 ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=root
+
+[server_02]
+server02 ansible_ssh_host=server02 ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=root
+
+[server_03]
+server03 ansible_ssh_host=server03 ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=root
+
+[servers:children]
+server_01
+server_02
+server_03

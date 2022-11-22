@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  # controller
+  ansible:
+    container_name: ansible-control-node
+    build: ./Ansible_Control_node
+    tty: true
+    working_dir: "/var/data"
+    volumes:
+      - .:/var/data # bind playbooks to cotrol_node
+
+  # target nodes
+  server01:
+    container_name: server01
+    build: ./Target_Server
+    tty: true
+
+  server02:
+    container_name: server02
+    build: ./Target_Server
+    tty: true
+
+  server03:
+    container_name: server03
+    build: ./Target_Server
+    tty: true
